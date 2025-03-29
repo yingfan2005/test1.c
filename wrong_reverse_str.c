@@ -1,4 +1,4 @@
-include<stdio.h>
+#include<stdio.h>
 int my_stringlen(char* str)
 {
     int count=0;
@@ -7,6 +7,7 @@ int my_stringlen(char* str)
         count ++;
         str ++;
     }
+    return count;
 }
 void reverse_str(char str[])
 {
@@ -25,9 +26,10 @@ void reverse_str(char str[])
 {
     int left = 0;
     int right = my_stringlen(arr)-1;
+    char tmp;
     while(left<right)
     {
-        int tmp = arr[left];
+        char tmp = arr[left];
         arr[left]= arr[right];
         arr[right]=tmp;
         left ++;
